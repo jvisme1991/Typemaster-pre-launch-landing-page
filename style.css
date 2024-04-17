@@ -2,14 +2,14 @@
 
 :root {
   /* Color Primaries */
-  --clr-primary-orange: ;
-  --clr-primary-darkblue: ;
+  --clr-primary-orange: hsl(22, 89%, 52%);
+  --clr-primary-darkblue: hsl(220, 50%, 17%);
 
   /* Color Neutrals */
-  --clr-neutral-lightorange: ;
-  --clr-neutral-darkgray: ;
-  --clr-neutral-lightgray: ;
-  --clr-neutral-white: ;
+  --clr-neutral-lightorange: hsl(22, 100%, 69%);
+  --clr-neutral-darkgray: hsl(221, 23%, 58%);
+  --clr-neutral-lightgray: hsl(198, 28%, 93%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
 
   /* Font Family */
   --ff-body: "Barlow", sans-serif;
@@ -40,8 +40,31 @@
   }
 }
 
+/* Utility Classes */
 .sticker {
   background-color: var(--clr-primary-orange);
+}
+
+.button-1 {
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral-white);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-300);
+}
+
+.button-2 {
+  background: var(--clr-neutral-lightgray);
+  color: var(--clr-primary-darkblue);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-300);
+}
+
+button {
+  border: none;
+  padding: 0.7em 1em;
+  border-radius: 0.5rem;
 }
 
 .no-show-tablet {
@@ -52,8 +75,71 @@
   display: none;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 body {
   font-family: "barlow", sans-serif;
   font-weight: var(--fw-medium);
   font-size: var(--fs-300);
+}
+
+h1 {
+  font-size: var(--fs-600);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: var(--lh-600);
+}
+
+header {
+  margin: 1rem;
+}
+
+@media (min-width: 48rem) {
+  button {
+    border: none;
+    padding: 1em 1.67em;
+    border-radius: 0.5rem;
+  }
+  header {
+    margin: 2rem;
+  }
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four";
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+/* .space-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+
+.keyboard {
+  /* margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 1rem; */
+  position: absolute;
+  right: 0%;
+}
+
+.hero .col:nth-child(3) p {
+  margin-right: 1rem;
 }
