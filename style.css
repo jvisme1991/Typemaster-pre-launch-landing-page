@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Color Primaries */
+  --clr-primary-orange: ;
+  --clr-primary-darkblue: ;
+
+  /* Color Neutrals */
+  --clr-neutral-lightorange: ;
+  --clr-neutral-darkgray: ;
+  --clr-neutral-lightgray: ;
+  --clr-neutral-white: ;
+
+  /* Font Family */
+  --ff-body: "Barlow", sans-serif;
+
+  /* Font Weight */
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* Font Size */
+  --fs-300: 1rem;
+  --fs-350: 1.125rem;
+  --fs-400: 1.5rem;
+  --fs-500: 2rem;
+  --fs-600: 3rem;
+
+  /* Line Heights */
+  --lh-300: 1.625rem;
+  --lh-400: 1.75rem;
+  --lh-500: 2.25rem;
+  --lh-600: 3rem;
+}
+
+@media (min-width: 48.001rem) {
+  :root {
+    --fs-600: 3.5rem;
+    --lh-600: 3.5rem;
+  }
+}
+
+.sticker {
+  background-color: var(--clr-primary-orange);
+}
+
+.no-show-tablet {
+  display: none;
+}
+
+.no-show-desktop {
+  display: none;
+}
+
+body {
+  font-family: "barlow", sans-serif;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-300);
+}
